@@ -3,15 +3,15 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
- * Created by Lenovo Z on 23.02.2017.   javac Server.java Client.java Replace.java
+ * Created by Lenovo Z on 23.02.2017.
  */
 public class Server implements Replace {
     public Server() {
     }
 
     public String doReplace(String string) {
-        string.replaceAll("(?i:[aeiouy])","*");
-        return string;
+        String repString =string.replaceAll("(?i:[aeiou])","*");
+        return repString;
     }
 
     public static void main(String args[]) {
